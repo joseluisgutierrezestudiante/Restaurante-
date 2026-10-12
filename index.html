@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="night">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=devicquere-width, initial-scale=1.0" />
+  <title>Fogón Artesano — Alta Cocina de Autor</title>
+  <meta name="description" content="Restaurante de autor en Bucaramanga: cocina elegante, ingredientes de temporada, reservas y experiencias gastronómicas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">FA</div>
+    <span class="loader__brand">Fogón Artesano</span>
+    <span class="loader__line"></span>
+  </div>
+
+  <!-- Cursor personalizado (lupa editorial) -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label" id="cursorLabel">Explorar</span></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark">FA</span>
+        <span class="logo__text">Fogón <em>Artesano</em></span>
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#inicio">Inicio</a></li>
+          <li><a class="nav__link" href="#historia">Historia</a></li>
+          <li><a class="nav__link" href="#menu">Menú</a></li>
+          <li><a class="nav__link" href="#galeria">Galería</a></li>
+          <li><a class="nav__link" href="#reservas">Reservas</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Cambiar a modo día">
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb" aria-hidden="true"></span>
+          </span>
+          <span class="theme-toggle__label" id="themeLabel">Día</span>
+        </button>
+        <a href="#reservas" class="btn btn--gold btn--sm">Reservar Mesa</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media" data-clip>
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata"
+          poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1600">
+          <source src="https://videos.pexels.com/video-files/8626672/8626672-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <span class="eyebrow hero__eyebrow reveal" id="heroEyebrow">Fogón Artesano · Restaurante de autor</span>
+        <h1 class="hero__title reveal">El arte de la<br /><em>alta cocina</em></h1>
+        <p class="hero__sub reveal" id="heroSub">
+          Sabores de autor, ingredientes de temporada y una experiencia pensada para los
+          sentidos, en pleno corazón de la ciudad.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#reservas" class="btn btn--gold btn--lg">Reservar Mesa</a>
+          <a href="#menu" class="btn btn--ghost btn--lg">Ver Menú</a>
+        </div>
+        <div class="occ occ--inline reveal" id="occHero">
+          <span class="occ__dot"></span>
+          <span id="occHeroText"></span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#historia" aria-label="Desplazar hacia abajo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- Historia / Concepto -->
+    <section class="section concept" id="historia">
+      <div class="container">
+        <div class="spread">
+          <div class="spread__media">
+            <div class="spread__frame parallax" data-speed="0.06">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=900" alt="Chef emplatando un plato de autor" loading="lazy" data-clip />
+            </div>
+            <span class="spread__caption">Servicio de autor ·&nbsp;Bucaramanga</span>
+          </div>
+
+          <div class="spread__body reveal">
+            <span class="eyebrow">Nuestra Historia</span>
+            <h2 class="spread__title">Del fogón<br />a la mesa, <em>con vocación de&nbsp;eternidad.</em></h2>
+            <p class="spread__note">«Cocinamos como si cada velada fuera la última: sin prisa, con fuego real y producto que huele a mercado.»</p>
+            <p class="spread__lead">
+              Empezamos con una pequeña cocina y una idea: que cada plato cuente algo.
+              Hoy seguimos eligiendo la materia prima cada semana, elaborando a fuego lento
+              y sirviendo con la calma que merece una buena mesa.
+            </p>
+            <ul class="concept__list">
+              <li>Materia prima de productores locales</li>
+              <li>Cocina de fuego y técnicas clásicas</li>
+              <li>Carta que cambia con la temporada</li>
+            </ul>
+            <div class="spread__stats">
+              <div class="stat"><strong>12</strong><span>años de oficio</span></div>
+              <div class="stat"><strong>40+</strong><span>recetas de temporada</span></div>
+              <div class="stat"><strong>4.9</strong><span>valoración media</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plato estrella -->
+    <section class="section feature" id="feature">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">La Pieza Estrella</span>
+          <h2 class="section__title">El plato que <em>define la casa</em></h2>
+        </div>
+
+        <div class="feature__inner">
+          <div class="feature__text reveal">
+            <span class="tag tag--chef">Chef</span>
+            <h3>Solomillo a la Brasa</h3>
+            <p>
+              Solomillo madurado, chimichurri de hierbas, verduras asadas y demiglace al vino tinto.
+            </p>
+            <strong class="feature__price">$153.000</strong>
+          </div>
+
+          <div class="feature__stage reveal" data-clip>
+            <img class="feature__fallback" src="https://images.unsplash.com/photo-1728034782567-ca8da7f2d507?auto=format&fit=crop&q=80&w=900" alt="Fotografía real del solomillo a la brasa con verduras asadas" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menú interactivo -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">La Carta · Temporada</span>
+          <h2 class="section__title">Menú <em>de Autor</em></h2>
+          <p class="section__lead">Una carta breve que cambia con el mercado. Sin artificios: producto, fuego y tiempo.</p>
+        </div>
+
+        <aside class="chef-note reveal" id="chefNoteBox" aria-live="polite">
+          <div class="chef-note__meta">
+            <span class="chef-note__kicker">Nota del chef</span>
+            <time class="chef-note__date" id="chefNoteDate"></time>
+          </div>
+          <p class="chef-note__text" id="chefNote">Cargando la nota de hoy…</p>
+          <span class="chef-note__sign">— <em>Chef de Cocina</em></span>
+        </aside>
+
+        <div class="menu-toolbar reveal">
+          <div class="diet" id="dietPanel">
+            <div class="diet__chips">
+              <button class="chip" type="button" data-filter="vegan" aria-pressed="false">Vegano</button>
+              <button class="chip" type="button" data-filter="gluten" aria-pressed="false">Sin Gluten</button>
+              <button class="chip" type="button" data-filter="lactose" aria-pressed="false">Sin Lactosa</button>
+              <button class="chip" type="button" data-filter="keto" aria-pressed="false">Keto</button>
+            </div>
+          </div>
+          <div class="menu-toolbar__actions">
+            <button class="chip chip--reset" id="dietReset" type="button">Limpiar</button>
+            <button class="read-toggle" id="readToggle" type="button" aria-pressed="false">
+              <span class="read-toggle__dot" aria-hidden="true"></span>
+              Modo lectura de alérgenos
+            </button>
+          </div>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Categorías del menú">
+          <button class="tab is-active" data-category="entradas" role="tab" aria-selected="true">Entradas</button>
+          <button class="tab" data-category="principales" role="tab" aria-selected="false">Platos Fuertes</button>
+          <button class="tab tab--dayonly" data-category="brunch" role="tab" aria-selected="false">Brunch</button>
+          <button class="tab tab--nightonly" data-category="cocteleria" role="tab" aria-selected="false">Coctelería de Autor</button>
+          <button class="tab" data-category="postres" role="tab" aria-selected="false">Postres</button>
+        </div>
+
+        <div class="menu-panel is-active" id="panel-entradas" role="tabpanel">
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="1" data-keto="1">
+            <span class="dish__num">01</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Tartar de Atún Rojo</h3>
+                <span class="dish__tags"><span class="tag tag--chef">Chef</span></span>
+              </div>
+              <p class="dish__desc">Atún rojo macerado en cítricos, aguacate, sésamo tostado y aceite de sésamo ahumado.</p>
+            </div>
+            <span class="dish__price">$81.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="0" data-keto="1">
+            <span class="dish__num">02</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Burrata Cremosa</h3>
+                <span class="dish__tags"><span class="tag tag--gluten">Sin Gluten</span></span>
+              </div>
+              <p class="dish__desc">Burrata de búfala, tomate heirloom, albahaca fresca y reducción de balsámico añejado.</p>
+            </div>
+            <span class="dish__price">$63.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="1" data-lactose="1" data-keto="0">
+            <span class="dish__num">03</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Crema de Calabaza</h3>
+                <span class="dish__tags"><span class="tag tag--vegan">Vegano</span></span>
+              </div>
+              <p class="dish__desc">Calabaza asada, leche de coco, jengibre y crocante de pipas de calabaza.</p>
+            </div>
+            <span class="dish__price">$54.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="1" data-keto="0">
+            <span class="dish__num">04</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Pan de Masa Madre</h3>
+              </div>
+              <p class="dish__desc">Pan de masa madre con mantequilla de hierbas y flor de sal.</p>
+            </div>
+            <span class="dish__price">$27.000</span>
+          </article>
+        </div>
+
+        <div class="menu-panel" id="panel-principales" role="tabpanel">
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="1" data-keto="1">
+            <span class="dish__num">01</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Solomillo a la Brasa</h3>
+                <span class="dish__tags"><span class="tag tag--chef">Chef</span><span class="tag tag--gluten">Sin Gluten</span></span>
+              </div>
+              <p class="dish__desc">Solomillo madurado, chimichurri de hierbas, verduras asadas y demiglace al vino tinto.</p>
+            </div>
+            <span class="dish__price">$153.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">02</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Risotto de Boletus</h3>
+              </div>
+              <p class="dish__desc">Risotto cremoso con boletus edulis, parmesano de 24 meses y aceite de trufa.</p>
+            </div>
+            <span class="dish__price">$108.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="1" data-keto="1">
+            <span class="dish__num">03</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Lubina a la Sal</h3>
+                <span class="dish__tags"><span class="tag tag--gluten">Sin Gluten</span></span>
+              </div>
+              <p class="dish__desc">Lubina silvestre horneada, cítricos asados y alioli de azafrán.</p>
+            </div>
+            <span class="dish__price">$126.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="1" data-keto="1">
+            <span class="dish__num">04</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Cordero Mejorado</h3>
+              </div>
+              <p class="dish__desc">Paletilla de cordero a baja temperatura, puré de zanahorias asadas y jugo de romero.</p>
+            </div>
+            <span class="dish__price">$130.000</span>
+          </article>
+        </div>
+
+        <div class="menu-panel" id="panel-brunch" role="tabpanel">
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="1" data-keto="0">
+            <span class="dish__num">01</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Tostada de Aguacate</h3>
+              </div>
+              <p class="dish__desc">Pan de masa madre, aguacate, huevo poché, rúcula y chile en hojuelas.</p>
+            </div>
+            <span class="dish__price">$49.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">02</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Pancakes de Avena</h3>
+              </div>
+              <p class="dish__desc">Pancakes de avena, sirope de arce, frutos rojos y yogur griego.</p>
+            </div>
+            <span class="dish__price">$54.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="0" data-keto="1">
+            <span class="dish__num">03</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Bowl de Yogur y Granola</h3>
+              </div>
+              <p class="dish__desc">Yogur griego, granola casera, miel y fruta de temporada.</p>
+            </div>
+            <span class="dish__price">$45.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">04</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Croque Madame</h3>
+              </div>
+              <p class="dish__desc">Sándwich de jamón ibérico, bechamel y huevo de corral.</p>
+            </div>
+            <span class="dish__price">$58.000</span>
+          </article>
+        </div>
+
+        <div class="menu-panel" id="panel-cocteleria" role="tabpanel">
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="1" data-lactose="1" data-keto="1">
+            <span class="dish__num">01</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Old Fashioned Ahumado</h3>
+              </div>
+              <p class="dish__desc">Bourbon ahumado sobre virutas de roble, azúcar de caña y bitters artesanos.</p>
+            </div>
+            <span class="dish__price">$54.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="0" data-keto="1">
+            <span class="dish__num">02</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Espresso Martini</h3>
+                <span class="dish__tags"><span class="tag tag--chef">Chef</span></span>
+              </div>
+              <p class="dish__desc">Vodka, licor de café, crema de toffee y un toque de sal escamada.</p>
+            </div>
+            <span class="dish__price">$49.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="1" data-lactose="1" data-keto="1">
+            <span class="dish__num">03</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Negroni Rojo</h3>
+              </div>
+              <p class="dish__desc">Ginebra, vermut rojo y Campari infusionado con piel de naranja.</p>
+            </div>
+            <span class="dish__price">$49.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="1" data-lactose="1" data-keto="1">
+            <span class="dish__num">04</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>G&amp;T de Jengibre</h3>
+                <span class="dish__tags"><span class="tag tag--vegan">Vegano</span></span>
+              </div>
+              <p class="dish__desc">Ginebra cítrica, tónica premium, jengibre fresco y pomelo.</p>
+            </div>
+            <span class="dish__price">$58.000</span>
+          </article>
+        </div>
+
+        <div class="menu-panel" id="panel-postres" role="tabpanel">
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">01</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Tarta de Chocolate Amargo</h3>
+                <span class="dish__tags"><span class="tag tag--chef">Chef</span></span>
+              </div>
+              <p class="dish__desc">Chocolate 70%, bizcocho húmedo, helado de vainilla y sal escamada.</p>
+            </div>
+            <span class="dish__price">$40.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="0" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">02</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Cheesecake de Frutos Rojos</h3>
+              </div>
+              <p class="dish__desc">Base crujiente, crema suave y coulis de frutos rojos de temporada.</p>
+            </div>
+            <span class="dish__price">$36.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="0" data-lactose="0" data-keto="0">
+            <span class="dish__num">03</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Crema Catalana</h3>
+                <span class="dish__tags"><span class="tag tag--gluten">Sin Gluten</span></span>
+              </div>
+              <p class="dish__desc">Crème brûlée de vainilla bourbon con un sutil toque cítrico.</p>
+            </div>
+            <span class="dish__price">$36.000</span>
+          </article>
+          <article class="dish dish--editorial reveal" data-gluten="1" data-vegan="1" data-lactose="1" data-keto="1">
+            <span class="dish__num">04</span>
+            <div class="dish__main">
+              <div class="dish__head">
+                <h3>Sorbete de Temporada</h3>
+                <span class="dish__tags"><span class="tag tag--vegan">Vegano</span><span class="tag tag--gluten">Sin Gluten</span></span>
+              </div>
+              <p class="dish__desc">Sorbete artesanal de fruta fresca, crumble y hierbabuena.</p>
+            </div>
+            <span class="dish__price">$31.000</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Galería</span>
+          <h2 class="section__title">Experiencias</h2>
+          <p class="section__lead">El ambiente, el fuego y los platos que salen de nuestra cocina.</p>
+        </div>
+
+        <div class="gallery__grid">
+          <figure class="gallery__item reveal" data-clip data-caption="El salón principal al anochecer">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800" alt="Salón del restaurante al anochecer" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Nuestra carta en papel de algodón">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Interior del restaurante" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="El fuego, protagonista de la cocina">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" alt="Cocinero trabajando junto al fuego" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Emplatado de la casa">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=800" alt="Chef emplatando" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Tartar de atún rojo">
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800" alt="Plato gourmet de la casa" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Cocina de baja temperatura">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800" alt="Maniobras de cocina" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Barra de coctelería de autor">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=800" alt="Cócteles en la barra" loading="lazy" />
+          </figure>
+          <figure class="gallery__item reveal" data-clip data-caption="Producto fresco de temporada">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800" alt="Plato saludable de verduras" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservas -->
+    <section class="section booking" id="reservas">
+      <div class="container booking__inner">
+        <div class="booking__intro reveal">
+          <span class="eyebrow">Reservas</span>
+          <h2 class="section__title">Reserva tu <em>velada</em></h2>
+          <p class="section__lead">
+            Elige tu mesa sobre el plano, confirma la hora y listo.
+          </p>
+          <div class="occ occ--big reveal">
+            <span class="occ__dot"></span>
+            <span id="occBookingText"></span>
+          </div>
+        </div>
+
+        <div class="booking__card reveal">
+          <form id="bookingForm" novalidate>
+            <div class="booking__row">
+              <label class="field">
+                <span>Fecha</span>
+                <input type="date" id="bkDate" name="fecha" required />
+                <small class="field__error" data-for="bkDate"></small>
+              </label>
+              <label class="field">
+                <span>Hora</span>
+                <select id="bkTime" name="hora" required>
+                  <option value="">Elige…</option>
+                  <option>13:00</option><option>13:30</option><option>14:00</option>
+                  <option>14:30</option><option>15:00</option><option>15:30</option>
+                  <option>20:00</option><option>20:30</option><option>21:00</option>
+                  <option>21:30</option><option>22:00</option><option>22:30</option>
+                </select>
+                <small class="field__error" data-for="bkTime"></small>
+              </label>
+            </div>
+
+            <fieldset class="booking__map-field">
+              <legend>Elige tu mesa · Toca una mesa o zona</legend>
+              <div class="floor">
+                <svg id="floorMap" viewBox="0 0 1060 480" role="group" aria-label="Plano interactivo de mesas">
+                  <g class="floor__zone">
+                    <rect x="45" y="45" width="250" height="185" rx="18" />
+                    <text x="170" y="70" class="floor__zone-label">TERRAZA</text>
+                    <g class="seat" data-zone="Terraza" data-guests="4">
+                      <circle cx="120" cy="140" r="26" />
+                      <text x="120" y="146" class="floor__seat-n">4</text>
+                    </g>
+                    <g class="seat" data-zone="Terraza" data-guests="2">
+                      <circle cx="210" cy="120" r="26" />
+                      <text x="210" y="126" class="floor__seat-n">2</text>
+                    </g>
+                    <g class="seat" data-zone="Terraza" data-guests="2">
+                      <circle cx="210" cy="190" r="26" />
+                      <text x="210" y="196" class="floor__seat-n">2</text>
+                    </g>
+                  </g>
+
+                  <g class="floor__zone">
+                    <rect x="330" y="45" width="330" height="330" rx="18" />
+                    <text x="495" y="70" class="floor__zone-label">SALÓN PRINCIPAL</text>
+                    <g class="seat" data-zone="Salón principal" data-guests="2">
+                      <circle cx="405" cy="135" r="26" />
+                      <text x="405" y="141" class="floor__seat-n">2</text>
+                    </g>
+                    <g class="seat" data-zone="Salón principal" data-guests="4">
+                      <circle cx="495" cy="120" r="26" />
+                      <text x="495" y="126" class="floor__seat-n">4</text>
+                    </g>
+                    <g class="seat" data-zone="Salón principal" data-guests="4">
+                      <circle cx="585" cy="135" r="26" />
+                      <text x="585" y="141" class="floor__seat-n">4</text>
+                    </g>
+                    <g class="seat" data-zone="Salón principal" data-guests="2">
+                      <circle cx="440" cy="260" r="26" />
+                      <text x="440" y="266" class="floor__seat-n">2</text>
+                    </g>
+                    <g class="seat" data-zone="Salón principal" data-guests="6">
+                      <circle cx="545" cy="270" r="26" />
+                      <text x="545" y="276" class="floor__seat-n">6</text>
+                    </g>
+                  </g>
+
+                  <g class="floor__zone">
+                    <rect x="695" y="45" width="320" height="200" rx="18" />
+                    <text x="855" y="70" class="floor__zone-label">ZONA VIP</text>
+                    <g class="seat" data-zone="Zona VIP" data-guests="4">
+                      <circle cx="775" cy="140" r="26" />
+                      <text x="775" y="146" class="floor__seat-n">4</text>
+                    </g>
+                    <g class="seat" data-zone="Zona VIP" data-guests="6">
+                      <circle cx="870" cy="160" r="26" />
+                      <text x="870" y="166" class="floor__seat-n">6</text>
+                    </g>
+                    <g class="seat" data-zone="Zona VIP" data-guests="2">
+                      <circle cx="955" cy="110" r="26" />
+                      <text x="955" y="116" class="floor__seat-n">2</text>
+                    </g>
+                  </g>
+
+                  <g class="floor__zone">
+                    <rect x="695" y="280" width="320" height="155" rx="18" />
+                    <text x="855" y="305" class="floor__zone-label">BARRA</text>
+                    <g class="seat" data-zone="Barra" data-guests="1">
+                      <circle cx="745" cy="350" r="26" />
+                      <text x="745" y="356" class="floor__seat-n">1</text>
+                    </g>
+                    <g class="seat" data-zone="Barra" data-guests="2">
+                      <circle cx="840" cy="370" r="26" />
+                      <text x="840" y="376" class="floor__seat-n">2</text>
+                    </g>
+                    <g class="seat" data-zone="Barra" data-guests="1">
+                      <circle cx="935" cy="340" r="26" />
+                      <text x="935" y="346" class="floor__seat-n">1</text>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="table-pick">
+                <span id="pickZone" class="table-pick__zone">Zona: —</span>
+                <span id="pickTable" class="table-pick__table">Mesa: —</span>
+                <label class="field table-pick__guests">
+                  <span>Comensales</span>
+                  <select id="bkGuests" name="comensales">
+                    <option value="">Auto</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="+">Más de 8</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="visually-hidden">
+                <input type="radio" name="zona" value="Terraza" />
+                <input type="radio" name="zona" value="Salón principal" />
+                <input type="radio" name="zona" value="Zona VIP" />
+                <input type="radio" name="zona" value="Barra" />
+              </div>
+              <small class="field__error" data-for="zona"></small>
+            </fieldset>
+
+            <div class="booking__contacts">
+              <label class="field">
+                <span>Nombre</span>
+                <input type="text" id="bkName" name="nombre" placeholder="Tu nombre" autocomplete="name" />
+                <small class="field__error" data-for="bkName"></small>
+              </label>
+              <label class="field">
+                <span>Teléfono</span>
+                <input type="tel" id="bkPhone" name="telefono" placeholder="300 000 0000" autocomplete="tel" />
+                <small class="field__error" data-for="bkPhone"></small>
+              </label>
+            </div>
+
+            <fieldset class="booking__occasion">
+              <legend>¿Nos visitas por alguna ocasión especial?</legend>
+              <div class="occasion__chips">
+                <button type="button" class="occasion-chip" data-occasion="Cumpleaños">Cumpleaños</button>
+                <button type="button" class="occasion-chip" data-occasion="Aniversario">Aniversario</button>
+                <button type="button" class="occasion-chip" data-occasion="Negocios">Negocios</button>
+                <button type="button" class="occasion-chip" data-occasion="Primera visita">Primera visita</button>
+                <button type="button" class="occasion-chip" data-occasion="Solo cenar">Solo cenar</button>
+              </div>
+              <input type="hidden" name="ocasion" id="bkOccasion" value="" />
+            </fieldset>
+
+            <fieldset class="booking__pay">
+              <legend>Método de pago</legend>
+              <div class="booking__pay-grid">
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Efectivo" />
+                  <span class="pay-option__dot" style="--dot: #C9B79C"></span>
+                  <span class="pay-option__body">
+                    <strong>Efectivo</strong>
+                    <small>Paga al finalizar tu visita</small>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Tarjeta Débito" />
+                  <span class="pay-option__dot" style="--dot: #5B8DEF"></span>
+                  <span class="pay-option__body">
+                    <strong>Tarjeta Débito</strong>
+                    <small>Visa o Mastercard</small>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Tarjeta Crédito" />
+                  <span class="pay-option__dot" style="--dot: #C5A059"></span>
+                  <span class="pay-option__body">
+                    <strong>Tarjeta Crédito</strong>
+                    <small>Hasta 12 cuotas sin interés</small>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Nequi" />
+                  <span class="pay-option__dot" style="--dot: #A855F7"></span>
+                  <span class="pay-option__body">
+                    <strong>Nequi</strong>
+                    <small>Paga con tu app Nequi</small>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Daviplata" />
+                  <span class="pay-option__dot" style="--dot: #F59E0B"></span>
+                  <span class="pay-option__body">
+                    <strong>Daviplata</strong>
+                    <small>Billetera Daviplata</small>
+                  </span>
+                </label>
+                <label class="pay-option">
+                  <input type="radio" name="pago" value="Transferencia" />
+                  <span class="pay-option__dot" style="--dot: #34C759"></span>
+                  <span class="pay-option__body">
+                    <strong>Transferencia</strong>
+                    <small>Pagos en pesos colombianos</small>
+                  </span>
+                </label>
+              </div>
+              <small class="field__error" data-for="pago"></small>
+            </fieldset>
+
+            <button type="submit" class="btn btn--gold btn--lg btn--block">Confirmar Reserva</button>
+          </form>
+
+          <div class="booking__success" id="bookingSuccess" hidden>
+            <span class="booking__success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <h3>¡Mesa confirmada!</h3>
+            <p>Tu código de reserva es <strong id="resCode"></strong>.<br />Te esperamos. Buen provecho.</p>
+            <p class="booking__success-pay">Forma de pago seleccionada: <strong id="resPay"></strong></p>
+            <p class="booking__success-pay">Ocasión: <strong id="resOcc">Sin ocasión especial</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto / Ubicación -->
+    <section class="section contact" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Ubicación</span>
+          <h2 class="section__title">Te <em>esperamos</em></h2>
+
+          <ul class="contact__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              <span>Calle 45 #25-40, Cabecera del Llano, Bucaramanga</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span>+57 300 000 0000</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span>Lun – Dom · 13:00–16:00 y 20:00–24:00</span>
+            </li>
+          </ul>
+
+          <div class="contact__social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H6v3h3v9h3v-9h2.5l.5-3H12V6.7c0-.4.3-.7.7-.7H15V3Z"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4v10.5a4 4 0 1 1-4-4"/><path d="M15 4c.3 2.3 1.9 3.8 4 4"/></svg></a>
+          </div>
+        </div>
+
+        <div class="contact__map reveal" data-clip>
+          <iframe
+            src="https://maps.google.com/maps?q=Cabecera%20del%20Llano%2C%20Bucaramanga%2C%20Colombia&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            title="Mapa de ubicación de Fogón Artesano" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__text">Fogón <em>Artesano</em></span>
+        <p>Alta cocina de autor en Bucaramanga.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#historia">Historia</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="footer__hours">
+        <strong>Horario</strong>
+        <span>Lun – Dom · 13:00–16:00</span>
+        <span>20:00–24:00</span>
+      </div>
+
+      <div class="footer__pay">
+        <strong>Métodos de pago</strong>
+        <span class="footer__pay-note">Efectivo · Tarjetas · Billeteras digitales</span>
+        <div class="footer__pay-badges">
+          <span class="pay-badge">Efectivo</span>
+          <span class="pay-badge">Tarjeta Débito</span>
+          <span class="pay-badge">Crédito</span>
+          <span class="pay-badge">Nequi</span>
+          <span class="pay-badge">Daviplata</span>
+          <span class="pay-badge">Transferencia</span>
+        </div>
+        <span class="footer__pay-currency">Precios en pesos colombianos (COP)</span>
+      </div>
+    </div>
+    <div class="container footer__copy">
+      <span>© <span id="year"></span> Fogón Artesano. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <!-- Reproductor de ambiente sonoro -->
+  <div class="audio" id="audioPlayer">
+    <button class="audio__toggle" id="audioToggle" aria-label="Reproducir ambiente sonoro" aria-pressed="false">
+      <span class="audio__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="audio__note">Ambiente</span>
+    </button>
+  </div>
+
+  <!-- Botón flotante WhatsApp -->
+  <a id="waFloat" href="#" target="_blank" rel="noopener" class="wa-float" aria-label="Pedir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.6 15L2 21.8 5.9 20.6A10 10 0 1 0 12 2Zm5.3 14.1c-.3.8-1.6 1.5-2.3 1.6-.6.1-1.4.2-2.3-.1-1.1-.4-2.3-1.3-3.8-2.8-1.4-1.4-2.3-2.6-2.7-3.7-.3-.9-.3-1.6-.2-2.2.1-.7.8-1.9 1.6-2.2.3-.1.6-.1.8.1.2.2.7 1.8.8 1.9.1.2.1.3 0 .6-.1.2-.2.4-.4.6-.2.2-.5.5-.6.2-.2.3-.4.1-.7.2-.4 1-1.6 2.1-2.6 1.4-1.3 2.6-1.7 2.9-1.9.3-.2.5-.1.7-.1.1-.2.9-1 1.1-1.4.2-.3.5-.3.8-.2.3.1 1.9.9 2.2 1.1.3.1.5.2.6.4.1.3.1 1-.2 1.7Z" />
+    </svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
